@@ -1,0 +1,25 @@
+{
+    "name": "cjr-lang",
+    "displayName": "cjr",
+    "description": "cjr lang syntax highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cjr",
+            "aliases": ["CJR", "cjr"],
+            "extensions": [".cjr"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cjr",
+            "scopeName": "source.cjr",
+            "path": "./syntaxes/cjr.tmLanguage.json"
+        }]
+    }
+}

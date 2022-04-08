@@ -1,0 +1,63 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CJR",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{	
+			"include": "#strings"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#constant"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.cjr",
+				"match": "\\b(if|while|for|return)\\b"
+			}]	
+		},
+		"support": {
+			"patterns": [{
+				"name": "support.function.cjr",
+				"match": "\\b(func|require|gccflag|library|include)\\b"
+			},
+			{
+				"name": "support.type.cjr",
+				"match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|void|char|string)\\b"
+			}]
+		},
+		"constant": {
+			"patterns": [{
+				"name": "constant.language.cjr",
+				"match": "\\b(true|false|null|undefined)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.cjr",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cjr",
+					"match": "\\\\."
+				}
+			]
+		},
+		"storage": {
+			"patterns":	[{
+				"name": "storage.type.cjr",
+				"match": "\\b(var)\\b"	
+			}]
+		}
+	},
+	"scopeName": "source.cjr"
+}
