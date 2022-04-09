@@ -55,7 +55,7 @@
 		"storage": {
 			"patterns":	[{
 				"name": "storage.type.cjr",
-				"match": "\\b(var)\\b"	
+				"match": "\\b(var|namespace)\\b"	
 			}]
 		}
 	},
